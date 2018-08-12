@@ -20,9 +20,13 @@ const HideTokenConfirmationModal = require('./hide-token-confirmation-modal')
 const CustomizeGasModal = require('../customize-gas-modal')
 const NotifcationModal = require('./notification-modal')
 const ConfirmResetAccount = require('./confirm-reset-account')
+const ConfirmRemoveAccount = require('./confirm-remove-account')
+const QRScanner = require('./qr-scanner')
 const TransactionConfirmed = require('./transaction-confirmed')
 const WelcomeBeta = require('./welcome-beta')
 const Notification = require('./notification')
+
+import ConfirmCustomizeGasModal from './customize-gas'
 
 const modalContainerBaseStyle = {
   transform: 'translate3d(-50%, 0, 0px)',
@@ -241,6 +245,19 @@ const MODALS = {
     },
   },
 
+  CONFIRM_REMOVE_ACCOUNT: {
+    contents: h(ConfirmRemoveAccount),
+    mobileModalStyle: {
+      ...modalContainerMobileStyle,
+    },
+    laptopModalStyle: {
+      ...modalContainerLaptopStyle,
+    },
+    contentStyle: {
+      borderRadius: '8px',
+    },
+  },
+
   NEW_ACCOUNT: {
     contents: [
       h(NewAccountModal, {}, []),
@@ -267,7 +284,31 @@ const MODALS = {
 
   CUSTOMIZE_GAS: {
     contents: [
-      h(CustomizeGasModal, {}, []),
+      h(CustomizeGasModal),
+    ],
+    mobileModalStyle: {
+      width: '100vw',
+      height: '100vh',
+      top: '0',
+      transform: 'none',
+      left: '0',
+      right: '0',
+      margin: '0 auto',
+    },
+    laptopModalStyle: {
+      width: '720px',
+      height: '377px',
+      top: '80px',
+      transform: 'none',
+      left: '0',
+      right: '0',
+      margin: '0 auto',
+    },
+  },
+
+  CONFIRM_CUSTOMIZE_GAS: {
+    contents: [
+      h(ConfirmCustomizeGasModal),
     ],
     mobileModalStyle: {
       width: '100vw',
@@ -296,6 +337,18 @@ const MODALS = {
         h(TransactionConfirmed),
       ]),
     ],
+    mobileModalStyle: {
+      ...modalContainerMobileStyle,
+    },
+    laptopModalStyle: {
+      ...modalContainerLaptopStyle,
+    },
+    contentStyle: {
+      borderRadius: '8px',
+    },
+  },
+  QR_SCANNER: {
+    contents: h(QRScanner),
     mobileModalStyle: {
       ...modalContainerMobileStyle,
     },

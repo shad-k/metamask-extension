@@ -1,13 +1,38 @@
 # Changelog
 
-## Current Master
+## Current Develop Branch
 
-- Attempting to import an empty private key will now show a clear error.
-- Fix bug where metamask data would stop being written to disk after prolonged use
-- Fix bug where account reset did not work with custom RPC providers.
-- Fix for Brave i18n getAcceptLanguages [#4270](https://github.com/MetaMask/metamask-extension/issues/4270)
-- Fix bug where nonce mutex was never released
-- Add phishing notice
+## 4.9.1 Mon Aug 09 2018
+
+- [#4884](https://github.com/MetaMask/metamask-extension/pull/4884): Allow to have tokens per account and network.
+- [#4989](https://github.com/MetaMask/metamask-extension/pull/4989): Continue to use original signedTypedData.
+- [#5010](https://github.com/MetaMask/metamask-extension/pull/5010): Fix ENS resolution issues.
+- [#5000](https://github.com/MetaMask/metamask-extension/pull/5000): Show error while allowing confirmation of tx where simulation fails.
+- [#4995](https://github.com/MetaMask/metamask-extension/pull/4995): Shows retry button on dApp initialized transactions.
+
+## 4.9.0 Mon Aug 07 2018
+
+- [#4926](https://github.com/MetaMask/metamask-extension/pull/4926): Show retry button on the latest tx of the earliest nonce.
+- [#4888](https://github.com/MetaMask/metamask-extension/pull/4888): Suggest using the new user interface.
+- [#4947](https://github.com/MetaMask/metamask-extension/pull/4947): Prevent sending multiple transasctions on multiple confirm clicks.
+- [#4844](https://github.com/MetaMask/metamask-extension/pull/4844): Add new tokens auto detection.
+- [#4667](https://github.com/MetaMask/metamask-extension/pull/4667): Remove rejected transactions from transaction history.
+- [#4625](https://github.com/MetaMask/metamask-extension/pull/4625): Add Trezor Support.
+- [#4625](https://github.com/MetaMask/metamask-extension/pull/4625/commits/523cf9ad33d88719520ae5e7293329d133b64d4d): Allow to remove accounts (Imported and Hardware Wallets)
+- [#4814](https://github.com/MetaMask/metamask-extension/pull/4814): Add hex data input to send screen.
+- [#4691](https://github.com/MetaMask/metamask-extension/pull/4691): Redesign of the Confirm Transaction Screen.
+- [#4840](https://github.com/MetaMask/metamask-extension/pull/4840): Now shows notifications when transactions are completed.
+- [#4855](https://github.com/MetaMask/metamask-extension/pull/4855): Allow the use of HTTP prefix for custom rpc urls.
+
+## 4.8.0 Thur Jun 14 2018
+
+- [#4513](https://github.com/MetaMask/metamask-extension/pull/4513): Attempting to import an empty private key will now show a clear error.
+- [#4570](https://github.com/MetaMask/metamask-extension/pull/4570): Fix bug where metamask data would stop being written to disk after prolonged use.
+- [#4523](https://github.com/MetaMask/metamask-extension/pull/4523): Fix bug where account reset did not work with custom RPC providers.
+- [#4524](https://github.com/MetaMask/metamask-extension/pull/4524): Fix for Brave i18n getAcceptLanguages.
+- [#4557](https://github.com/MetaMask/metamask-extension/pull/4557): Fix bug where nonce mutex was never released.
+- [#4566](https://github.com/MetaMask/metamask-extension/pull/4566): Add phishing notice.
+- [#4591](https://github.com/MetaMask/metamask-extension/pull/4591): Allow Copying Token Addresses and link to Token on Etherscan.
 
 ## 4.7.4 Tue Jun 05 2018
 
